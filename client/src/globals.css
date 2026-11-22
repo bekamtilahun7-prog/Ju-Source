@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+:root {
+  --navy-blue: #0078d4;
+  --page-bg: #f4f5f9;
+  --card-bg: #ffffff;
+  --heading: #000000;
+  --card-heading: #111111;
+  --muted-text: #a0aec0;
+  --body-text: #171717;
+  --academic-icon: #6366f1;
+  --postgrad-icon: #63d82f;
+  --border: #f4eded;
+  --button-shadow: #b7c6ff;
+
+  --main-background: #0b1120;
+  --secondary-background: #111827;
+  --card-panel: #172033;
+  --elevated-card: #1e293b;
+  --primary-accent: #3b82f6;
+  --hover-accent: #60a5fa;
+  --main-text: #f8fafc;
+  --secondary-text: #a7b2c4;
+  --border-divider: #293548;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --error: #f87171;
+}
+
+:root[data-theme="dark"] {
+  --navy-blue: #3b82f6;
+  --page-bg: #0b1120;
+  --card-bg: #172033;
+  --heading: #fcf9f8;
+  --card-heading: #fcf9f8;
+  --muted-text: #a7b2c4;
+  --body-text: #f8fafc;
+  --academic-icon: #6366f1;
+  --postgrad-icon: #63d82f;
+  --border: #293548;
+  --button-shadow: rgba(96, 165, 250, 0.35);
+}
+
+:root[data-theme="light"] {
+  --navy-blue: #0078d4;
+  --page-bg: #f4f5f9;
+  --card-bg: #ffffff;
+  --heading: #000000;
+  --card-heading: #111111;
+  --muted-text: #a0aec0;
+  --body-text: #171717;
+  --border: #edf0f4;
+  --button-shadow: #b7c6ff;
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+  @apply bg-[var(--page-bg)] text-[var(--body-text)] text-sm antialiased font-poppins;
+}
+
+body::selection {
+  @apply bg-[var(--navy-blue)] text-white;
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+.move-gradient {
+  background-image: linear-gradient(to right, var(--navy-blue), #7aaae6);
+  background-size: 200% 100%;
+  animation: movegradient 5s infinite;
+}
+
+@keyframes movegradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
