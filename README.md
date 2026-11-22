@@ -1,143 +1,137 @@
-# 📸 Thumblify – AI YouTube Thumbnail Generator
+# JU-Source 🎓
 
-Thumbify is an intelligent web application that empowers content creators to generate click-worthy YouTube thumbnails using AI. Leveraging ClipDrop’s text-to-image API, Thumbify transforms simple text descriptions into high-quality visual thumbnails with customizable styles, ratios, and overlays.
+### Better Resources. Smarter Preparation. Stronger Students.
 
-<img width="1919" height="1039" alt="image" src="https://github.com/user-attachments/assets/116c0913-401e-4a6a-94cc-e3084cf34c17" />
+JU-Source is a centralized academic resource platform designed for Jimma University students. It aims to make university examination preparation simpler, smarter, and more accessible by bringing department-approved lecture notes, past examination papers, and other learning materials into one organized place.
 
+Instead of searching through multiple sources and group chats, students can find the academic resources they need in one trusted platform.
+<img width="1892" height="857" alt="image" src="https://github.com/user-attachments/assets/087bc88f-adde-41fb-8fb5-a539bf313184" />
 
-<img width="1901" height="1036" alt="image" src="https://github.com/user-attachments/assets/6cfec019-a862-46f5-9c04-0361ddfc4a37" />
+---
 
+## 🎯 Problem Statement
 
-<img width="1901" height="1037" alt="image" src="https://github.com/user-attachments/assets/805b836b-0519-483b-8959-131234f5688c" />
+University students often struggle to access organized and reliable academic materials. Lecture notes, slides, and past examination papers are scattered across different lecturers, communication channels, and student groups.
 
+This creates several challenges:
 
-<img width="1898" height="1029" alt="image" src="https://github.com/user-attachments/assets/f045bd83-2207-4c63-a9dd-60bf8c0972fe" />
+- Difficulty finding relevant learning materials.
+- Uncertainty about which resources are reliable.
+- Time wasted searching through different sources.
+- Limited access to organized examination preparation materials.
+- Unnecessary academic stress.
 
+## 💡 Our Solution
 
-# 🚀 Key Features
-🎨 AI-Powered Thumbnail Generation
+JU-Source provides a centralized platform where students can easily discover and access department-approved academic resources.
 
-Generate stunning thumbnails instantly by describing your idea. Powered by ClipDrop’s advanced text-to-image API.
+Department coordinators publish approved materials, the platform organizes them, and students can browse and download the resources they need.
 
-🛠️ Rich Customization
+## ✨ Core Features
 
-Choose from multiple:
+- **Approved Lecture Notes:** Access department-approved course materials.
+- **Past Examination Papers:** Find previous examination papers for preparation.
+- **Department Organization:** Browse academic resources by department.
+- **Search & Browse:** Find relevant materials more easily.
+- **Easy Downloads:** Access and download available learning resources.
+- **Centralized Resources:** Keep essential academic materials in one place.
 
-Aspect ratios
+## 👥 User Roles
 
-Artistic styles (Cinematic, Anime, Realistic, 3D, etc.)
+| Role | Responsibilities |
+|---|---|
+| Student | Browse and download academic materials. |
+| Department Coordinator | Upload and publish approved learning materials. |
+| Administrator | Oversee users, access, and platform management. |
 
-Color themes
+## 🛠️ Technology Stack
 
-🔡 Text Overlay Integration
+| Technology | Purpose |
+|---|---|
+| React + TypeScript | Frontend development |
+| Node.js | Backend runtime |
+| Express.js | Backend framework and API development |
+| MongoDB | Database |
+| CSS | User interface styling |
 
-Add titles, captions, and hooks directly to thumbnails.
+## 📁 Project Structure
 
-💾 My Generations
+```text
+JU-Source/
+│
+├── client/                 # Frontend application
+│   ├── public/
+│   └── src/
+│
+├── server/                 # Backend application
+│
+├── .gitignore
+├── .gitattributes
+├── package.json
+└── README.md
+```
 
-All created thumbnails are automatically saved and organized for later access.
+## 🚀 Getting Started
 
-📺 YouTube Preview Mode
+### Prerequisites
 
-See your thumbnail in:
+Make sure you have the following installed:
 
-YouTube Home Feed preview
+- [Node.js](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+- [MongoDB](https://www.mongodb.com/)
 
-YouTube Sidebar preview
+### 1. Clone the Repository
 
-Before downloading or publishing.
+```bash
+git clone https://github.com/bekamtilahun7-prog/Ju-Source.git
+```
 
-🔒 Secure User Authentication
+### 2. Navigate to the Project
 
-Full signup/login system powered by Express sessions.
-(Passwords securely hashed, persistent sessions enabled.)
+```bash
+cd Ju-Source
+```
 
-# 🧰 Tech Stack
-Frontend
+### 3. Install Dependencies
 
-React (Vite)
+Install frontend dependencies:
 
-TailwindCSS
-
-Framer Motion (animations)
-
-Lucide React (icons)
-
-Backend
-
-Node.js
-
-Express.js
-
-TypeScript
-
-Database & Storage
-
-MongoDB + Mongoose
-
-Cloudinary (image hosting)
-
-AI Services
-
-ClipDrop (primary image generation)
-
-# 🔑 Environment Variables
-Server – /server/.env
-PORT=3000
-
-MONGODB_URI=your_mongodb_connection_string
-
-SESSION_SECRET=your_session_secret_key
-
-AI & Storage
-CLIPDROP_API_KEY=your_clipdrop_api_key
-
-CLOUDINARY_URL=cloudinary://api_key:api_secret@cloud_name
-
-Client – /client/.env
-
-(Vite requires all env variables to start with VITE_)
-
-VITE_API_URL=http://localhost:3000
-
-# ⚙️ Installation & Running Locally
-1️⃣ Clone the Repository
-git clone https://github.com/daniwinsss/Thumblify.git
-cd Thumbify
-
-2️⃣ Server Setup
-cd server
-npm install
-
-create and configure your .env file
-npm run dev   # or npm start
-
-3️⃣ Client Setup
+```bash
 cd client
 npm install
-npm run dev
+```
 
-# 📡 API Endpoints (Overview)
-Authentication
+Install backend dependencies:
 
-Method	Endpoint	Description
+```bash
+cd ../server
+npm install
+```
 
-POST	/api/auth/register	Register a new user
+### 4. Configure Environment Variables
 
-POST	/api/auth/login	Login user
+Create a `.env` file inside the server directory and configure the required environment variables according to the backend implementation.
 
-POST	/api/auth/logout	Logout user
+### 5. Run the Application
 
-Thumbnails
+Start the frontend and backend using the development scripts defined in their respective `package.json` files.
 
-Method	Endpoint	Description
+## 🌱 Our Vision
 
-POST	/api/thumbnail/generate	Generate a new AI thumbnail
+We believe students should spend less time searching for learning materials and more time learning.
 
-DELETE	/api/thumbnail/delete/:id	Delete a saved thumbnail
+JU-Source aims to create a more organized, accessible, and student-centered academic resource environment at Jimma University.
 
-User
+## 👨‍💻 Team NEXBUILD
 
-Method	Endpoint	Description
+Developed by Team NEXBUILD at Jimma Institute of Technology.
 
-GET	/api/user/profile	Fetch logged-in user profile
+**Our Motto:**
+
+> Better Resources. Smarter Preparation. Stronger Students.
+
+---
+
+**Repository:** [JU-Source](https://github.com/bekamtilahun7-prog/Ju-Source)
+
